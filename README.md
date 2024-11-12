@@ -15,3 +15,7 @@ You should now have all the plugin files under
 ## Usage
 
 Once installed, the plugin will prompt users to confirm they are 18 years or older before accessing the site's content. 
+
+## Why Server-Side Verification
+
+Age verification is handled server-side to ensure that access restrictions cannot be bypassed by disabling JavaScript or manipulating client-side scripts. This approach provides a more secure and reliable method of enforcing age restrictions.
