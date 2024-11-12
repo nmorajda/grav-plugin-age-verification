@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'pl' }}">
+<head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <title>{{ "AGE_VERIFICATION.TITLE"|t }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% endblock %}
+</head>
+<body>
+    <h1>{{ "AGE_VERIFICATION.HEADING"|t }}</h1>
+    <p>{{ "AGE_VERIFICATION.MESSAGE"|t }}</p>
+
+    <form method="post">
+        <button type="submit" name="age_verify" value="true">{{ "AGE_VERIFICATION.BUTTON"|t }}</button>
+    </form>
+</body>
+</html>

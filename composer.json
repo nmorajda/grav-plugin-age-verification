@@ -1,0 +1,24 @@
+{
+  "name": "n-morajda-abmstudio-pl/age-verification",
+  "type": "grav-plugin",
+  "description": "Age verivication.",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/n-morajda-abmstudio-pl/grav-plugin-age-verification",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "n.morajda@abmstudio.pl",
+      "email": "n.morajda@abmstudio.pl",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\AgeVerification\\": "classes/"
+    },
+    "classmap":  ["age-verification.php"]
+  }
+}

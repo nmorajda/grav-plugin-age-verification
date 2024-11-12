@@ -1,0 +1,13 @@
+en:
+  AGE_VERIFICATION:
+    TITLE: 'Age Verification'
+    HEADING: 'Please Verify Your Age'
+    MESSAGE: 'This website requires you to be 18 years or older. Please confirm your age.'
+    BUTTON: 'I am 18 or Older'
+
+pl:
+  AGE_VERIFICATION:
+    TITLE: 'Potwierdzenie pełnoletności'
+    HEADING: 'Potwierdź swój wiek'
+    MESSAGE: 'Ta strona przeznaczona jest wyłącznie dla osób pełnoletnich. Prosimy o potwierdzenie, że masz 18 lat lub więcej.'
+    BUTTON: 'Potwierdzam, że mam 18 lat'
