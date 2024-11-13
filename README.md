@@ -48,6 +48,14 @@ You can customize the plugin by editing the `age-verification.yaml` file. The fo
   External URL to redirect underage users
   **Default:** `https://www.google.com`
 
+- **protected_paths**:
+  Specifies the list of paths that should require age verification. If defined, only these paths will be protected.
+  Default: [] (empty, meaning all pages are protected except those in excluded_paths)
+
+- **excluded_paths**:
+  Specifies the list of paths that should be excluded from age verification. These paths will not be protected even if protected_paths is empty.
+  Default: []
+
 **Example 1**
 
 ```yaml
@@ -56,6 +64,8 @@ built_in_css: true
 cookie_duration: 60 # seconds
 cookie_name: 'age_verified'
 redirect_url: 'https://www.google.com' # URL to redirect underage users
+protected_paths:
+excluded_paths:
 ```
 
 **Example 2**
@@ -66,6 +76,32 @@ built_in_css: false
 cookie_duration: 86400 # 1 day in seconds (60 seconds * 60 minuts * 24 hours)
 cookie_name: 'user-age-verified'
 redirect_url: 'https://abmstudio.pl' # URL to redirect underage users
+protected_paths:
+excluded_paths:
+```
+
+## Protected and Excluded Paths (EXPERIMENTAL)
+
+### Protecting the Entire Site
+By default, if protected_paths is empty, the entire site will be protected, and users must verify their age to access any page except those listed in excluded_paths.
+
+### Protecting Specific Pages
+If you define protected_paths, only the specified paths will require age verification. All other pages will remain accessible without verification unless they are also listed in excluded_paths.
+
+### Excluding Specific Pages
+Use excluded_paths to exclude certain URLs from age verification. This is useful for pages like the redirect page to prevent infinite redirect loops.
+
+**Example 3**
+
+```yaml
+enabled: true
+built_in_css: true
+cookie_duration: 2592000 # 30 days in seconds
+cookie_name: 'age_verified'
+redirect_url: '/typography' # URL to redirect underage users
+protected_paths:
+excluded_paths:
+  - '/typography'
 ```
 
 ## Default Styling

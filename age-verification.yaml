@@ -2,4 +2,7 @@ enabled: true
 built_in_css: true
 cookie_duration: 60 # seconds
 cookie_name: 'age_verified'
-redirect_url: 'https://www.google.com' # URL to redirect underage users
+redirect_url: 'typography' # URL to redirect underage users
+protected_paths:
+excluded_paths:
+  - '/typography'
