@@ -29,11 +29,11 @@ Age verification is handled server-side to ensure that access restrictions canno
 You can customize the plugin by editing the `age-verification.yaml` file. The following options are available:
 
 - **enabled**:  
-  Enables or disables the age verification plugin functionality.
+  Enables or disables the age verification plugin functionality.  
   **Default:** `true` 
 
 - **built_in_css**:  
-  Determines if the plugin's default CSS styling is applied.
+  Determines if the plugin's default CSS styling is applied.  
   **Default:** `enabled` 
 
 - **cookie_duration**:  
@@ -45,7 +45,7 @@ You can customize the plugin by editing the `age-verification.yaml` file. The fo
   **Default:** `age_verified`
 
 - **redirect_url**:  
-  External URL to redirect underage users
+  External URL to redirect underage users  
   **Default:** `https://www.google.com`
 
 - **protected_paths**:
