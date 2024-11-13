@@ -74,6 +74,7 @@ class AgeVerificationPlugin extends Plugin
         // Pass variables to the Twig template
         $this->grav['twig']->twig_vars['age_verification'] = [
             'age_verification'       => 'ok',
+            'redirect_url' => $this->config->get('plugins.age-verification.redirect_url', 'https://www.google.com')
         ];
     }
 }
