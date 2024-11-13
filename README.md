@@ -49,12 +49,12 @@ You can customize the plugin by editing the `age-verification.yaml` file. The fo
   **Default:** `https://www.google.com`
 
 - **protected_paths**:
-  Specifies the list of paths that should require age verification. If defined, only these paths will be protected.
-  Default: [] (empty, meaning all pages are protected except those in excluded_paths)
+  Specifies the list of paths that should require age verification. If defined, only these paths will be protected.  
+  **Default:** `[]` (empty, meaning all pages are protected except those in excluded_paths)
 
 - **excluded_paths**:
-  Specifies the list of paths that should be excluded from age verification. These paths will not be protected even if protected_paths is empty.
-  Default: []
+  Specifies the list of paths that should be excluded from age verification. These paths will not be protected even if protected_paths is empty.  
+  **Default:** `['/typography']`
 
 **Example 1**
 
@@ -107,9 +107,3 @@ excluded_paths:
 ## Default Styling
 
 The plugin includes a default CSS file located in the `user/plugins/age-verification/assets` directory. This file defines the basic styling for the age verification prompt to ensure it has a consistent and user-friendly appearance. If `built_in_css` is set to `true` in the configuration file, these styles will be automatically applied. You can modify this file directly or add custom CSS in your theme to override the default styles as needed.
-
-**Location of default CSS file:**
-
-```bash
-    user/plugins/age-verification/assets/age-verification.css
-```
