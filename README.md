@@ -49,7 +49,7 @@ cookie_name: 'age_verified'
 
 ```yaml
 enabled: true
-cookie_duration: 604800 # 7 days in seconds (60 seconds * 24 hours * 30 days)
+cookie_duration: 86400 # 1 day in seconds (60 seconds * 60 minuts * 24 hours)
 cookie_name: 'user-age-verified'
 ```
 
