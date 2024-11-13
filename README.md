@@ -62,8 +62,7 @@ redirect_url: 'https://www.google.com' # URL to redirect underage users
 
 ```yaml
 enabled: true
-enabled: false
-built_in_css: true
+built_in_css: false
 cookie_duration: 86400 # 1 day in seconds (60 seconds * 60 minuts * 24 hours)
 cookie_name: 'user-age-verified'
 redirect_url: 'https://abmstudio.pl' # URL to redirect underage users
