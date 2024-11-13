@@ -3,8 +3,8 @@ en:
     TITLE: 'Age Verification'
     HEADING: 'Please Verify Your Age'
     MESSAGE: 'This website requires you to be 18 years or older. Please confirm your age.'
-    BUTTON: 'I am 18 or Older'
-    BUTTON_NO: 'I am not 18'
+    BUTTON: 'I am 18 or older'
+    BUTTON_NO: 'I am under 18 years old'
 
 pl:
   AGE_VERIFICATION:
