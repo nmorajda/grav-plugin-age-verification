@@ -6,12 +6,15 @@ The **Age Verification** Plugin is an extension for [Grav CMS](https://github.co
 
 ### Manual Installation
 
-To install the plugin manually, download the zip-version of this repository and unzip it under `/your/site/grav/user/plugins`. Then rename the folder to `age-verification`. You can find these files on [GitHub](https://github.com/nmorajda/grav-plugin-age-verification).
+To install the plugin manually, download the zip-version of this repository and unzip it under `your-site-grav/user/plugins`. Then rename the folder to `age-verification`. You can find these files on [GitHub](https://github.com/nmorajda/grav-plugin-age-verification).
 
 You should now have all the plugin files under
 
+```bash
     /your/site/grav/user/plugins/age-verification
+```
 
+After installation, it's recommended to **copy** the configuration file `user/plugins/age-verification/age-verification.yaml` to `user/config/plugins/` and the template file `user/plugins/age-verification/templates/age-verification.html.twig` to `user/themes/your-theme/templates/` to prevent them from being overwritten by future plugin updates.
 
 ## Usage
 
@@ -23,17 +26,18 @@ Age verification is handled server-side to ensure that access restrictions canno
 
 ## Configuration
 
-You can customize the plugin by editing the `age-verification.yaml` file located in `user/config/plugins/`. The following options are available:
+You can customize the plugin by editing the `age-verification.yaml` file. The following options are available:
 
 - **cookie_duration**:  
   Defines the duration (in seconds) for which the age verification cookie remains valid.  
-  **Default:** `2592000` (30 days)
+  **Default:** `60` (60 seconds)
 
 - **cookie_name**:  
   Sets the name of the age verification cookie.  
   **Default:** `age_verified`
 
-To modify these settings, open the `age-verification.yaml` file and adjust the values as needed. For example:
+
+**Example 1**
 
 ```yaml
 enabled: true
@@ -41,12 +45,12 @@ cookie_duration: 60 # seconds
 cookie_name: 'age_verified'
 ```
 
-**Example **
+**Example 2**
 
 ```yaml
 enabled: true
 cookie_duration: 604800 # 7 days in seconds (60 seconds * 24 hours * 30 days)
-cookie_name: 'age_verified'
+cookie_name: 'user-age-verified'
 ```
 
 
