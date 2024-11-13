@@ -71,6 +71,13 @@ class AgeVerificationPlugin extends Plugin
 
     public function onTwigSiteVariables()
     {
+
+        // Add assets
+        if ($this->config->get('plugins.age-verification.built_in_css')) {
+            $this->grav['assets']
+                ->add('plugin://age-verification/assets/age-verification.css');
+        }
+
         // Pass variables to the Twig template
         $this->grav['twig']->twig_vars['age_verification'] = [
             'age_verification'       => 'ok',

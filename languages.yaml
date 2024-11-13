@@ -2,14 +2,18 @@ en:
   AGE_VERIFICATION:
     TITLE: 'Age Verification'
     HEADING: 'Please verify your age'
-    MESSAGE: 'This website requires you to be 18 years or older. Please confirm your age.'
+    MESSAGE_FIRST_LINE: 'This website requires you to be 18 years or older.'
+    MESSAGE_SECOND_LINE: 'Please confirm your age.'    
     BUTTON: 'I am 18 or older'
     BUTTON_NO: 'I am under 18 years old'
+    LEGAL_NOTE: 'By verifying your age, you ensure legal compliance and gain access to our sports betting platform. Access for individuals under the legal age is not permitted.'
 
 pl:
   AGE_VERIFICATION:
     TITLE: 'Potwierdzenie pełnoletności'
     HEADING: 'Potwierdź swój wiek'
-    MESSAGE: 'Ta strona przeznaczona jest wyłącznie dla osób pełnoletnich. Prosimy o potwierdzenie, że masz 18 lat lub więcej.'
+    MESSAGE_FIRST_LINE: 'Ta strona przeznaczona jest wyłącznie dla osób pełnoletnich.'
+    MESSAGE_SECOND_LINE: 'Prosimy o potwierdzenie, że masz 18 lat lub więcej.'
     BUTTON: 'Potwierdzam, że mam 18 lat'
     BUTTON_NO: 'Nie mam 18 lat'
+    LEGAL_NOTE: 'Potwierdzając swój wiek, zapewniasz zgodność z przepisami i uzyskujesz dostęp do naszej platformy zakładów sportowych. Dostęp dla osób poniżej wymaganego wieku jest niedozwolony.'

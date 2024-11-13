@@ -1,0 +1,52 @@
+.age-verification {
+    min-height: 100vh;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-verification__wrapper {
+    width: 90vw;
+    max-width: 540px;
+    padding: 2em;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+}
+
+.age-verification__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-verification__form .btn__yes, 
+.age-verification__form .btn__no {
+    width: 100%;
+    margin: 1em;
+} 
+
+.age-verification__form .btn__yes {
+    cursor: pointer;
+    padding: 1em;
+    color: white;
+    background-color: rgba(14, 193, 47, 0.8);
+    border: none;
+    border-radius: .4rem;
+}
+
+.age-verification__form .btn__yes:hover,
+.age-verification__form .btn__yes:focus {
+    background-color: rgba(14, 193, 47, 0.98);
+    transition: background-color ease-in 0.3s;
+}
+
+.age-verification__form .btn__yes:active {
+    background-color: rgba(14, 193, 47, 0.9);
+}
+
+.age-verification__note {
+    font-size: 0.8em;
+}

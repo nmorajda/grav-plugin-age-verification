@@ -2,18 +2,33 @@
 <html lang="{{ grav.language.getLanguage ?: 'en' }}">
 <head>
     {% block head %}
-    <meta charset="utf-8" />
-    <title>{{ "AGE_VERIFICATION.TITLE"|t }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <title>{{ "AGE_VERIFICATION.TITLE"|t }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {# Plugins CSS #}
+        {% block assets deferred %}
+            {{ assets.css()|raw }}
+        {% endblock %}
     {% endblock %}
 </head>
-<body>
-    <h1>{{ "AGE_VERIFICATION.HEADING"|t }}</h1>
-    <p>{{ "AGE_VERIFICATION.MESSAGE"|t }}</p>
+<body class="age-verification">
 
-    <form method="post">
-        <button type="submit" name="age_verify" value="true">{{ "AGE_VERIFICATION.BUTTON"|t }}</button>
-        <a href="{{ age_verification.redirect_url}}">{{ "AGE_VERIFICATION.BUTTON_NO"|t }}</a>
-    </form>
+        <div class="age-verification__wrapper">
+            <div class="age-verification__content">
+                <h1>{{ "AGE_VERIFICATION.HEADING"|t }}</h1>
+                <p>{{ "AGE_VERIFICATION.MESSAGE_FIRST_LINE"|t }}</p>
+                <p>{{ "AGE_VERIFICATION.MESSAGE_SECOND_LINE"|t }}</p>
+            </div>
+
+            <form method="post" class="age-verification__form">
+                <button type="submit" name="age_verify" value="true" class="btn btn__yes">{{ "AGE_VERIFICATION.BUTTON"|t }}</button>
+                <a href="{{ age_verification.redirect_url}}" class="btn btn__no">{{ "AGE_VERIFICATION.BUTTON_NO"|t }}</a>
+            </form>
+
+            <p class="age-verification__note">{{ "AGE_VERIFICATION.LEGAL_NOTE"|t }}</p>
+        </div>
+
+
 </body>
 </html>
