@@ -9,7 +9,7 @@ author:
   email: n.morajda@abmstudio.pl
 homepage: https://github.com/nmorajda/grav-plugin-age-verification
 demo: 
-keywords: grav, plugin, etc
+keywords: grav, plugin
 bugs: https://github.com/nmorajda/grav-plugin-age-verification/issues
 docs: https://github.com/nmorajda/grav-plugin-age-verification/blob/develop/README.md
 license: MIT
@@ -30,7 +30,48 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    text_var:
+
+    built_in_css:
+      type: toggle
+      label: 'Use Built-in CSS'
+      highlight: 1
+      default: true
+      options:
+        1: 'Enabled'
+        0: 'Disabled'
+      validate:
+        type: bool
+
+    cookie_duration:
+      type: number
+      label: 'Cookie Duration (seconds)'
+      default: 2592000 # 30 days
+      validate:
+        type: int
+        min: 1
+        help: 'Duration in seconds for which the age verification cookie remains valid.'
+
+    cookie_name:
       type: text
-      label: PLUGIN_AGE_VERIFICATION.TEXT_VARIABLE
-      help: PLUGIN_AGE_VERIFICATION.TEXT_VARIABLE_HELP
+      label: 'Cookie Name'
+      default: 'age_verified'
+      validate:
+        required: true
+
+    redirect_url:
+      type: text
+      label: 'Redirect URL for Underage Users'
+      default: 'https://www.google.com'
+    
+    protected_paths:
+      type: array
+      label: 'Protected Paths'
+      help: 'List of paths that require age verification. One path per line.'
+      value_only: true
+
+    excluded_paths:
+      type: array
+      label: 'Excluded Paths'
+      help: 'List of paths to exclude from age verification. One path per line.'
+      value_only: true
+
